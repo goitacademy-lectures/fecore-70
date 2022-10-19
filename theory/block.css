@@ -1,0 +1,156 @@
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+} */
+
+body {
+  /* outline: 2px solid red; */
+  outline-offset: -2px;
+}
+
+/* reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text-block {
+  font-family: sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+
+  /* border: 10px dashed hotpink; */
+
+  width: 400px;
+  /* height: 400px; */
+
+  /* padding: 20px;
+  padding: 20px 100px;
+  padding: 20px 100px 20px;
+
+  padding-top: 30px;
+  padding-left: 0;
+  padding-bottom: 100px;
+  padding-right: 11px; */
+
+  margin: 100px;
+}
+
+.one {
+  margin-bottom: 40px;
+  border-right: 10px solid red;
+  border-bottom: 5px dashed slateblue;
+  border-left: 20px dotted blueviolet;
+}
+
+.two {
+  padding: 20px;
+  margin-top: 40px;
+
+  border: 3px solid hotpink;
+  border-radius: 10px 50px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background-color: teal;
+
+  border-radius: 50%;
+}
+
+.container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
+}
+
+.inline-link {
+  display: inline-block;
+
+  /* width: 300px;
+  height: 200px; */
+  margin: 30px;
+
+  border: 20px solid pink;
+
+  background-color: teal;
+  color: white;
+}
+
+.accent {
+  color: aqua;
+  font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.list {
+  width: 800px;
+  /* padding: 30px; */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
+}
+
+.item {
+  padding: 30px;
+  border: 1px solid pink;
+
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  background-color: teal;
+}
+
+.item:not(:first-child) {
+  margin-top: 20px;
+}
+
+/*
+  an + b
+*/
+
+.item:nth-child(3n + 2) {
+  background-color: lightblue;
+}
+/* парні елменети */
+.item:nth-child(2n) {
+  background-color: lightblue;
+}
+/* не парні елменети */
+.item:nth-child(2n + 1) {
+  background-color: lightblue;
+}
