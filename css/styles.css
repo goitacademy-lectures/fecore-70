@@ -18,6 +18,8 @@
 
   /* Others */
   --btn-radius: 25px;
+  --indent: 30px;
+  --items: 4;
 }
 
 /**
@@ -46,6 +48,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -59,6 +63,32 @@ img {
   padding: 0;
 }
 /* reset end */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
 
 .main-title {
   font-family: var(--secondary-font);
@@ -69,6 +99,8 @@ img {
 }
 
 .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -81,6 +113,8 @@ img {
 }
 
 .title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: calc(49 / 42);
@@ -88,10 +122,14 @@ img {
 }
 
 .title-theme-dark {
+  margin-bottom: 44px;
+
   color: var(--light-txt-cl);
 }
 
 .undertitle {
+  margin-bottom: 20px;
+
   color: var(--dark-txt-cl);
 }
 
@@ -142,8 +180,33 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  margin-right: 132px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .header-nav-link,
 .header-contact {
+  display: block;
+  padding: 52px 0;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -159,6 +222,14 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.header-group {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact {
+  margin-right: 40px;
+}
 /**
   |============================
   | Hero
@@ -200,7 +271,24 @@ img {
   | About
   |============================
 */
+.about-container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+
+  margin-right: 30px;
+}
+
+.about-right-side {
+  width: 470px;
+}
+
 .about-desc {
+  margin-bottom: 42px;
+
   font-size: 14px;
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
@@ -216,8 +304,40 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.price-block {
+  margin-bottom: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-list {
+  flex-basis: 570px;
+  padding: 30px 20px;
+  outline: 1px solid greenyellow;
+}
+
 .price-item {
+  display: flex;
+  align-items: baseline;
+
   color: var(--grey-cl);
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-btn {
+  display: block;
+  margin: 0 auto;
 }
 
 /**
@@ -260,7 +380,23 @@ img {
   background-color: #f7f7f7;
 }
 
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-item {
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
+
+.team-wrapper {
+  padding: 30px 10px 0;
+}
+
 .team-name {
+  margin-bottom: 8px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -269,6 +405,7 @@ img {
 }
 
 .team-position {
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -276,11 +413,30 @@ img {
 
   color: var(--accent-txt-cl);
 }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 /**
   |============================
   | Gallery
   |============================
 */
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.gallery-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
 /**
   |============================
   | Booking
