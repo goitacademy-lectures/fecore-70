@@ -159,16 +159,12 @@ img {
 
 .btn:hover,
 .btn:focus {
+  color: var(--light-txt-cl);
   background-color: var(--accent-bg-cl);
 }
 
 .btn-theme-dark {
   color: var(--light-txt-cl);
-}
-
-.btn-theme-dark:hover,
-.btn-theme-dark:focus {
-  background-color: var(--accent-bg-cl);
 }
 
 /**
@@ -239,7 +235,14 @@ img {
   background-color: #191c26;
 }
 
+.media-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .media-link {
+  display: block;
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -445,13 +448,35 @@ img {
 .contatcs-group {
   background-color: var(--dark-bg-cl);
 }
+
+.contatcs-group-container {
+  display: flex;
+  gap: 30px;
+}
+
+.booking {
+  flex-basis: 570px;
+}
+
+.booking-form {
+  opacity: 0;
+}
 /**
   |============================
   | Contatcs
   |============================
 */
+.contacts {
+  flex-basis: 570px;
+  padding-left: 100px;
+}
 .contacts-address {
+  margin-bottom: 70px;
   font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .contacts-link {
@@ -459,6 +484,8 @@ img {
 }
 
 .contacts-uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -476,6 +503,12 @@ img {
   | Footer
   |============================
 */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-copyright {
   font-weight: 600;
   font-size: 11px;
@@ -483,4 +516,9 @@ img {
   letter-spacing: 0.2em;
 
   color: var(--grey-cl);
+}
+
+.footer-media-link {
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
