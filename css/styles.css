@@ -86,7 +86,7 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   outline-offset: -2px;
 }
 
@@ -155,6 +155,7 @@ img {
 }
 
 .btn {
+  position: relative;
   max-width: 250px;
   min-width: 160px;
   min-height: 40px;
@@ -172,6 +173,7 @@ img {
   border: 1px solid #ff6c00;
   border-radius: var(--btn-radius);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .btn:hover,
@@ -460,6 +462,71 @@ img {
   justify-content: center;
   gap: 10px;
 }
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: #303030;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: #ff6c00;
+  /* background-color: lightblue; */
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* .socials-icon {
+  fill: lightblue;
+}
+
+.socials-link:hover .socials-icon {
+  fill: darkgreen;
+} */
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.client {
+  display: none;
+}
+
+.clients-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.clients-icon {
+  fill: currentColor;
+}
+
 /**
   |============================
   | Gallery
@@ -484,7 +551,14 @@ img {
   |============================
 */
 .contatcs-group {
+  max-width: 1600px;
+  margin: 0 auto;
+
   background-color: var(--dark-bg-cl);
+  background-image: url(../images/contacts/contacs-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left calc(50% + 423px) center;
 }
 
 .contatcs-group-container {
@@ -518,7 +592,20 @@ img {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+
   color: var(--grey-cl);
+}
+
+.contacts-icon {
+  margin-right: 16px;
+  stroke: #9da4bd;
+  fill: transparent;
+}
+
+.contacts-icon-top {
+  align-self: baseline;
 }
 
 .contacts-uppertitle {
