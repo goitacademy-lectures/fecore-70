@@ -93,6 +93,8 @@ img {
 }
 
 .main-title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 72px;
   line-height: calc(85 / 72);
@@ -104,7 +106,6 @@ img {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  /* gap: 20px; */
 
   font-weight: 600;
   font-size: 11px;
@@ -120,7 +121,7 @@ img {
   height: 1px;
   margin-right: 20px;
 
-  background-color: #303030;
+  background-color: var(--main-txt-cl);
 }
 
 .uppertitle-theme-dark {
@@ -172,7 +173,7 @@ img {
   color: var(--main-txt-cl);
 
   background-color: transparent;
-  border: 1px solid #ff6c00;
+  border: 1px solid var(--accent-bg-cl);
   border-radius: var(--btn-radius);
   cursor: pointer;
   overflow: hidden;
@@ -204,7 +205,7 @@ img {
   /* background-color: var(--dark-bg-cl); */
 }
 
-.no-transparency {
+.header.no-transparency {
   background-color: rgba(25, 28, 38, 0.5);
   backdrop-filter: blur(4px);
 }
@@ -216,6 +217,14 @@ img {
 
 .header-link {
   margin-right: 132px;
+}
+
+.header-logo {
+  fill: var(--main-txt-cl);
+}
+
+.header.no-transparency .header-logo {
+  fill: var(--light-txt-cl);
 }
 
 .header-nav {
@@ -292,9 +301,6 @@ img {
   | Hero
   |============================
 */
-.hero {
-}
-
 .hero-container {
   position: relative;
   display: flex;
@@ -317,6 +323,7 @@ img {
 
 .hero-undertitle {
   width: 360px;
+  margin: 0;
 }
 
 .media-list {
@@ -333,12 +340,33 @@ img {
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
 
-  color: #303030;
+  color: var(--main-txt-cl);
 }
 
 .media-link:hover,
 .media-link:focus {
   color: var(--accent-txt-cl);
+}
+
+.slider-pagination {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+}
+.slider-pagination-item {
+  margin-left: auto;
+  width: 8px;
+  height: 2px;
+
+  background-color: var(--grey-cl);
+}
+
+.slider-pagination-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.slider-pagination-item.active {
+  width: 18px;
+  background-color: var(--light-txt-cl);
 }
 
 .slider-controls {
@@ -366,7 +394,7 @@ img {
 
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--light-txt-cl);
 
   cursor: pointer;
 }
@@ -485,7 +513,7 @@ img {
   text-align: center;
   letter-spacing: 0.05em;
 
-  color: #303030;
+  color: var(--main-txt-cl);
 }
 
 .benefits-decor {
@@ -493,7 +521,7 @@ img {
   font-size: 16px;
   line-height: calc(22 / 16);
   text-align: center;
-  color: #ff6c00;
+  color: var(--accent-txt-cl);
 }
 
 .benefits-text {
@@ -502,7 +530,7 @@ img {
   line-height: calc(15 / 11);
   text-align: center;
 
-  color: #303030;
+  color: var(--main-txt-cl);
 }
 /**
   |============================
@@ -561,14 +589,14 @@ img {
   width: 44px;
   height: 44px;
 
-  color: #303030;
-  background-color: #fff;
+  color: var(--main-txt-cl);
+  background-color: var(--light-txt-cl);
   border-radius: 50%;
 }
 
 .socials-link:hover,
 .socials-link:focus {
-  color: #ff6c00;
+  color: var(--accent-txt-cl);
   /* background-color: lightblue; */
 }
 
@@ -583,39 +611,6 @@ img {
 .socials-link:hover .socials-icon {
   fill: darkgreen;
 } */
-
-.clients-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.client {
-  display: none;
-}
-
-.clients-link {
-  width: 170px;
-  height: 92px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  color: #afb1b8;
-}
-
-.clients-link:hover,
-.clients-link:focus {
-  border-color: #2196f3;
-  color: #2196f3;
-}
-
-.clients-icon {
-  fill: currentColor;
-}
 
 /**
   |============================
@@ -690,7 +685,7 @@ img {
 
 .contacts-icon {
   margin-right: 16px;
-  stroke: #9da4bd;
+  stroke: var(--grey-cl);
   fill: transparent;
 }
 
@@ -699,6 +694,8 @@ img {
 }
 
 .contacts-uppertitle {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   font-weight: 600;
@@ -708,6 +705,17 @@ img {
   text-transform: uppercase;
 
   color: var(--light-txt-cl);
+}
+
+.contacts-uppertitle::before {
+  content: '';
+
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+
+  background-color: rgba(157, 164, 189, 0.4);
 }
 
 .contacts-schedule {
