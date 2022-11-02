@@ -20,6 +20,8 @@
   --btn-radius: 25px;
   --indent: 30px;
   --items: 4;
+
+  --idx-header: 100;
 }
 
 /**
@@ -192,7 +194,19 @@ img {
   |============================
 */
 .header {
-  background-color: var(--dark-bg-cl);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--idx-header);
+
+  width: 100%;
+
+  /* background-color: var(--dark-bg-cl); */
+}
+
+.no-transparency {
+  background-color: rgba(25, 28, 38, 0.5);
+  backdrop-filter: blur(4px);
 }
 
 .header-container {
@@ -237,9 +251,37 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.header-nav-link {
+  position: relative;
+}
+
+.header-nav-link.current {
+  color: var(--accent-txt-cl);
+}
+
+.header-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  left: 5%;
+
+  width: 90%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--accent-bg-cl);
+  opacity: 0;
+}
+
+.header-nav-link.current::after,
+.header-nav-link:hover::after,
+.header-nav-link:focus::after {
+  opacity: 1;
+}
+
 .header-group {
   display: flex;
   align-items: center;
+  padding-right: 20px;
 }
 
 .header-contact {
@@ -251,11 +293,35 @@ img {
   |============================
 */
 .hero {
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+}
+
+.hero-left-side {
+  width: 100px;
+}
+
+.hero-right-side {
+  padding: 272px 0 208px 100px;
+  flex-grow: 1;
+
   background-color: #191c26;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url(../images/hero/slider-img.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-undertitle {
+  width: 360px;
 }
 
 .media-list {
   display: flex;
+  display: none;
   align-items: center;
   gap: 40px;
 }
@@ -275,17 +341,41 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.slider-controls {
+  position: absolute;
+  right: 35px;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .slider-btn {
+  min-width: 60px;
+  min-height: 24px;
+  padding: 0;
+  padding-bottom: 8px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.1em;
-
+  text-align: right;
   color: var(--light-txt-cl);
 
   background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
 
   cursor: pointer;
+}
+
+.slider-btn.disable {
+  text-align-last: left;
+  color: rgba(157, 164, 189, 0.6);
+  border-color: rgba(157, 164, 189, 0.6);
+  cursor: not-allowed;
 }
 
 /**
