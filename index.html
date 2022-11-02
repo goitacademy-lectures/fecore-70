@@ -29,7 +29,7 @@
 
   <body>
     <!-- Header section -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="header-link" href="">
           <img
@@ -43,7 +43,7 @@
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="header-item">
-              <a class="header-nav-link link" href="#about">About</a>
+              <a class="header-nav-link current link" href="#about">About</a>
             </li>
             <li class="header-item">
               <a class="header-nav-link link" href="#price">Services and prices</a>
@@ -68,25 +68,27 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container">
-          <ul class="media-list list">
-            <li class="media-item">
-              <a class="media-link link" href="">Instagram</a>
-            </li>
-            <li class="media-item">
-              <a class="media-link link" href="">Youtube</a>
-            </li>
-          </ul>
+        <div class="hero-container container">
+          <div class="hero-left-side">
+            <ul class="media-list list">
+              <li class="media-item">
+                <a class="media-link link" href="">Instagram</a>
+              </li>
+              <li class="media-item">
+                <a class="media-link link" href="">Youtube</a>
+              </li>
+            </ul>
+          </div>
           <div class="hero-right-side">
             <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
             <h1 class="main-title">BarberShop</h1>
-            <p class="undertitle undertitle-theme-dark">
+            <p class="hero-undertitle undertitle undertitle-theme-dark">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
-          <ul class="slider-list list">
+          <ul class="slider-controls list">
             <li class="slider-item">
-              <button class="slider-btn" type="button">Back</button>
+              <button class="slider-btn disable" type="button">Back</button>
             </li>
             <li class="slider-item">
               <button class="slider-btn" type="button">Forward</button>
@@ -412,55 +414,6 @@
           </ul>
         </div>
       </section>
-
-      <section class="section client">
-        <div class="container">
-          <ul class="clients-list list">
-            <li class="clients-items">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" width="106" height="60">
-                  <use href="./images/icons.svg#logo-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-items">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" width="106" height="60">
-                  <use href="./images/icons.svg#logo-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-items">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" width="106" height="60">
-                  <use href="./images/icons.svg#logo-3"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-items">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" width="106" height="60">
-                  <use href="./images/icons.svg#logo-4"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-items">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" width="106" height="60">
-                  <use href="./images/icons.svg#logo-5"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-items">
-              <a href="" class="clients-link">
-                <svg class="clients-icon" width="106" height="60">
-                  <use href="./images/icons.svg#logo-6"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
       <!-- Gallery section -->
       <section class="gallery section">
         <div class="container">
@@ -592,5 +545,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="./js/header-scroll.js"></script>
   </body>
 </html>
