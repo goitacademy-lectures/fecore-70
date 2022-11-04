@@ -54,7 +54,7 @@
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button">
+          <button class="btn btn-theme-dark" type="button" data-modal-open>
             <span class="btn-txt">Online-booking</span>
           </button>
         </div>
@@ -66,7 +66,7 @@
       <section class="hero">
         <div class="hero-container container">
           <div class="hero-left-side">
-            <ul class="media-list list">
+            <ul class="hero-media-list media-list list">
               <li class="media-item">
                 <a class="media-link link" href="">Instagram</a>
               </li>
@@ -76,7 +76,9 @@
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
+            <p class="hero-uppertitle uppertitle uppertitle-theme-dark">
+              A hair salon for men in Kyiv
+            </p>
             <h1 class="main-title">BarberShop</h1>
             <p class="hero-undertitle undertitle undertitle-theme-dark">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
@@ -212,13 +214,21 @@
           <h2 class="title">Our barbers</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img
-                class="team-avatar"
-                src="./images/team/team-1.jpg"
-                alt="John Smith"
-                width="370"
-                height="346"
-              />
+              <div class="team-thumb">
+                <img
+                  class="team-avatar"
+                  src="./images/team/team-1.jpg"
+                  alt="John Smith"
+                  width="370"
+                  height="346"
+                />
+                <div class="overlay">
+                  <p class="overlay-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet facilis
+                    accusantium eaque ab, aut eligendi adipisci. At assumenda fugit eum!
+                  </p>
+                </div>
+              </div>
               <div class="team-wrapper">
                 <h3 class="team-name">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -547,6 +557,17 @@
       </div>
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>
+          <svg class="close-btn-icon" width="20" height="20">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
