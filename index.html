@@ -475,21 +475,23 @@
         <div class="contatcs-group-container container">
           <section class="booking section">
             <h2 class="title title-theme-dark">Online-booking</h2>
-            <form class="booking-form">
+            <form class="booking-form" name="booking_form">
               <div>
                 <label>
                   <span>name*</span>
-                  <input type="text" />
+                  <input type="text" name="user_name" placeholder="Antony Black" />
                 </label>
                 <label>
                   <span>phone*</span>
-                  <input type="text" />
+                  <input type="tel" name="user_phone" placeholder="+38 (099) 123 45 67" />
                 </label>
               </div>
+
               <label>
                 <span>message</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="user_message" rows="5" placeholder="Hello"></textarea>
               </label>
+
               <button type="submit">send</button>
             </form>
           </section>
@@ -564,6 +566,55 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title"></p>
+        <form class="modal-form">
+          <div class="form-group">
+            <label class="form-field">
+              <input class="form-input" type="text" name="" />
+              <span class="form-label">Name</span>
+              <svg class="form-icon" width="20" height="20">
+                <use href="./images/icons.svg#user-pic"></use>
+              </svg>
+            </label>
+            <label class="form-field">
+              <input class="form-input" type="text" name="" />
+              <span class="form-label">Phone</span>
+              <svg class="form-icon" width="20" height="20">
+                <use href="./images/icons.svg#user-phone"></use>
+              </svg>
+            </label>
+            <label class="form-field">
+              <input class="form-input" type="text" name="" />
+              <span class="form-label">Email</span>
+              <svg class="form-icon" width="20" height="20">
+                <use href="./images/icons.svg#user-mail"></use>
+              </svg>
+            </label>
+            <label class="form-field">
+              <textarea class="form-message" name="" rows="5"></textarea>
+              <span>Comment</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="form-field">
+              <input class="form-payment" type="radio" name="payment" />
+              <svg class="form-payment-icon" width="40" height="30">
+                <use href="./images/icons.svg#user-mc"></use>
+              </svg>
+            </label>
+            <label class="form-field">
+              <input class="form-payment" type="radio" name="payment" />
+              <svg class="form-payment-icon" width="40" height="30">
+                <use href="./images/icons.svg#user-visa"></use>
+              </svg>
+            </label>
+          </div>
+          <label>
+            <input type="checkbox" name="" />
+            <span>Accept <a href="">Privacy policy</a></span>
+          </label>
+          <button class="form-btn" type="submit">Submit</button>
+        </form>
       </div>
     </div>
 
