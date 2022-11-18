@@ -1,0 +1,28 @@
+.benefits {
+  @include section;
+}
+
+.benefits-quantity {
+  @include fonts(42px, 57px, 700, 0.05em);
+  text-align: center;
+
+  color: var(--main-txt-cl);
+}
+
+.benefits-decor {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+
+  color: var(--accent-txt-cl);
+}
+
+.benefits-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-align: center;
+
+  color: var(--main-txt-cl);
+}
