@@ -1,0 +1,8 @@
+.logo__img {
+  fill: var(--main-txt-cl);
+  transition: fill var(--trns-fast);
+
+  .header--transparent & {
+    fill: var(--light-txt-cl);
+  }
+}
