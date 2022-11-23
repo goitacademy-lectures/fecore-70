@@ -1,0 +1,62 @@
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  transform-origin: top left;
+
+  transition: transform var(--trns-fast);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-70%) scale(0.6);
+}
+
+.form-info {
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+  transform: translateY(105%) scale(0.3);
+  transform-origin: left;
+  opacity: 0;
+
+  font-size: 8px;
+  color: #dcad35;
+
+  transition: 200ms;
+}
+
+.form-input:not(:placeholder-shown):invalid:required ~ .form-info {
+  transform: translateY(105%) scale(1);
+  opacity: 1;
+}
+
+.form-info-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.warning,
+.success {
+  opacity: 0;
+  transform: scale(0.2);
+  transform-origin: center;
+  transition: var(--trns-fast);
+}
+
+.form-input:not(:placeholder-shown):invalid:required ~ .form-info-icon .warning {
+  opacity: 1;
+  transform: scale(1);
+  fill: #dcad35;
+  transition-delay: 150ms;
+}
+
+.form-input:not(:placeholder-shown):valid:required ~ .form-info-icon .success {
+  opacity: 1;
+  transform: scale(1);
+  fill: #06ab63;
+  transition-delay: 150ms;
+}

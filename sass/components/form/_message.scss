@@ -1,0 +1,31 @@
+.form-message {
+  display: block;
+  width: 100%;
+  padding: 18px 12px;
+  resize: none;
+
+  outline: unset;
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: 6px;
+
+  transition: var(--trns-fast);
+}
+
+.form-message:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 108, 0, 0.25);
+}
+
+.form-message ~ .form-label {
+  top: 48px;
+  left: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: #fff;
+  pointer-events: none;
+}
+
+.form-message:focus ~ .form-label,
+.form-message:not(:placeholder-shown) ~ .form-label {
+  transform: translateY(-140%) scale(0.8);
+}

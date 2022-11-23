@@ -1,0 +1,114 @@
+.contatcs-group {
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-color: var(--dark-bg-cl);
+  background-image: url(../images/contacts/contacs-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left calc(50% + 423px) center;
+}
+
+.contatcs-group-container {
+  display: flex;
+  gap: 30px;
+}
+
+.booking {
+  flex-basis: 570px;
+}
+
+.booking-form-group {
+  display: flex;
+  gap: 30px;
+
+  margin-bottom: 44px;
+}
+
+.booking-form-field {
+  position: relative;
+  flex-basis: 270px;
+}
+
+.booking-form-label {
+  display: block;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.booking-form-input,
+.booking-form-textarea {
+  width: 100%;
+  height: 24px;
+
+  color: #ffffff;
+
+  outline: transparent;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  transition: var(--trns-fast);
+}
+
+.booking-form-input::placeholder,
+.booking-form-textarea::placeholder {
+  opacity: 0;
+  color: var(--grey-cl);
+  transition: var(--trns-fast) 200ms;
+}
+
+.booking-form-input:focus::placeholder,
+.booking-form-textarea:focus::placeholder {
+  opacity: 1;
+}
+
+.booking-form-input:focus,
+.booking-form-input:not(:placeholder-shown),
+.booking-form-textarea:focus,
+.booking-form-textarea:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.booking-form-label {
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+
+  transform-origin: left;
+  transition: var(--trns-fast);
+}
+
+.booking-form-input:focus + .booking-form-label,
+.booking-form-input:not(:placeholder-shown) + .booking-form-label,
+.booking-form-textarea:focus + .booking-form-label,
+.booking-form-textarea:not(:placeholder-shown) + .booking-form-label {
+  color: #ffffff;
+  transform: translateY(-25px) scale(0.8);
+}
+
+/* message field */
+.booking-form-message {
+  position: relative;
+  display: block;
+  margin-bottom: 44px;
+}
+.booking-form-textarea {
+  height: 76px;
+  resize: none;
+}
+
+.booking-form-textarea + .booking-form-label {
+  top: 0;
+}
+
+.booking-form-textarea:focus + .booking-form-label {
+  color: #ffffff;
+  transform: translateY(-25px) scale(0.8);
+}

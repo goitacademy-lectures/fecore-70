@@ -1,0 +1,57 @@
+.form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-checkbox {
+  appearance: none;
+
+  width: 18px;
+  height: 18px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%0A%3E%3Cpath d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'%0Afill='%23ff6c00' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0;
+
+  border: 2px solid #111319;
+  border-radius: 3px;
+
+  transition: var(--trns-fast);
+  cursor: pointer;
+}
+
+.form-checkbox:checked {
+  background-color: #ff6c00;
+  border-color: transparent;
+  background-size: 14px;
+}
+
+.form-checkbox-icon .unchecked {
+  opacity: 1;
+  transition: var(--trns-fast);
+}
+
+.form-checkbox:checked + .form-checkbox-icon .unchecked {
+  opacity: 0;
+}
+
+.form-checkbox-icon .checked {
+  opacity: 0;
+  transition: var(--trns-fast);
+}
+
+.form-checkbox:checked + .form-checkbox-icon .checked {
+  opacity: 1;
+}
+
+.form-agreement-text {
+  user-select: none;
+}
+
+.form-agreement-link {
+  color: #ff6c00;
+}

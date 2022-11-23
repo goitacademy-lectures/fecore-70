@@ -1,0 +1,64 @@
+/* payment method */
+.form-field-payment {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.form-field-payment:not(:last-child) {
+  padding-bottom: 10px;
+}
+.form-field-payment:not(:last-child):after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background-image: linear-gradient(to right, transparent, #ff6c00 25%, #ff6c00 75%, transparent);
+}
+
+.form-payment-icon {
+  fill: #959595;
+  transition: var(--trns-fast);
+}
+
+.form-payment:checked ~ .form-payment-icon {
+  fill: var(--accent-bg-cl);
+}
+.form-payment-title {
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.form-payment-title::after {
+  content: 'Default';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) scale(0);
+
+  display: inline-block;
+  padding: 2px 12px;
+  font-size: 8px;
+
+  color: var(--light-txt-cl);
+  background-color: var(--accent-bg-cl);
+  border-radius: 6px;
+  opacity: 0;
+  transition: var(--trns-fast);
+}
+
+.form-payment:checked ~ .form-payment-title::after {
+  opacity: 1;
+  transition-delay: 200ms;
+  transform: translateY(-50%) scale(1);
+}
+
+.text-muted {
+  display: block;
+  font-weight: 400;
+  color: #959595;
+}
