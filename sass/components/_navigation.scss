@@ -1,10 +1,20 @@
+.nav {
+  @include mq(tablet, max) {
+    display: none;
+  }
+}
+
 .nav__list {
   display: flex;
   align-items: center;
 }
 .nav__item {
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 16px;
+
+    @include mq(desktop) {
+      margin-right: 30px;
+    }
   }
 }
 .nav__link {

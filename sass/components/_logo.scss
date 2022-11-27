@@ -1,6 +1,10 @@
 .logo__img {
-  fill: var(--main-txt-cl);
+  fill: var(--light-txt-cl);
   transition: fill var(--trns-fast);
+
+  @include mq(tablet) {
+    fill: var(--main-txt-cl);
+  }
 
   .header--transparent & {
     fill: var(--light-txt-cl);

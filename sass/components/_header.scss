@@ -8,6 +8,11 @@
 
   transition: background-color var(--trns-fast), backdrop-filter var(--trns-fast);
 
+  @include mq(tablet, max) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &--transparent {
     background-color: rgba(25, 28, 38, 0.5);
     backdrop-filter: blur(4px);
@@ -18,15 +23,23 @@
   align-items: center;
 }
 .header__logo {
-  margin-right: 132px;
+  margin-right: 60px;
+
+  @include mq(desktop) {
+    margin-right: 132px;
+  }
 }
 .header__nav {
   margin-right: auto;
 }
 .header__group {
-  display: flex;
-  align-items: center;
-  padding-right: 20px;
+  display: none;
+
+  @include mq(tablet) {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
 }
 .header__contact {
   display: block;
@@ -43,6 +56,10 @@
   transition-property: color;
   transition-duration: 300ms;
   transition-timing-function: ease-in;
+
+  @include mq(desktop, max) {
+    display: none;
+  }
 
   &:hover,
   &:focus {
