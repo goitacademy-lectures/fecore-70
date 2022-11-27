@@ -1,23 +1,31 @@
+.gallery {
+  @extend %section;
+}
+
 .gallery-uppertitle {
   margin-bottom: 44px;
 }
 
 .gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
+  @include card-set;
+
+  @include mq(tablet) {
+    @include card-set(2);
+  }
+
+  @include mq(desktop) {
+    @include card-set(4);
+  }
 }
 .gallery-item {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-
   /* animation */
   transition: transform var(--trns-fast), box-shadow var(--trns-fast);
   overflow: hidden;
   transform-origin: 50% 0;
   transform: perspective(800px) rotateX(0deg) translateZ(0);
-}
 
-.gallery-item:hover {
-  transform: perspective(800px) rotateX(7deg) translate3d(0, -25px, 10px);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  &:hover {
+    transform: perspective(800px) rotateX(7deg) translate3d(0, -25px, 10px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
 }

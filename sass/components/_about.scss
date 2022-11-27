@@ -1,34 +1,40 @@
 .about {
-  @include section;
+  @extend %section;
 }
-
 .about-container {
   display: flex;
 }
-
 .about-list {
   display: flex;
   gap: 30px;
 
   margin-right: 30px;
-}
 
+  @include mq(tablet, max) {
+    display: none;
+  }
+
+  @include mq(desktop, max) {
+    flex-direction: column;
+  }
+}
 .about-item {
   overflow: hidden;
 }
-
 .about-img {
   transition: transform 1000ms ease;
-}
 
-.about-item:hover .about-img {
-  transform: scale(1.2);
+  .about-item:hover & {
+    transform: scale(1.2);
+  }
 }
-
 .about-right-side {
-  width: 470px;
-}
+  max-width: 330px;
 
+  @include mq(desktop) {
+    max-width: 470px;
+  }
+}
 .about-desc {
   margin-bottom: 42px;
 

@@ -8,11 +8,11 @@
 // base styles
 @import './base/base';
 @import './base/reset';
+@import './base/typography';
 
 // components styles
 @import './components/section';
 @import './components/container';
-@import './components/typography';
 @import './components/buttons';
 @import './components/header';
 @import './components/logo';
@@ -31,3 +31,4 @@
 @import './components/footer';
 @import './components/modal';
 @import './components/form/module';
+@import './components/menu';

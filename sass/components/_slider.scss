@@ -2,6 +2,10 @@
   position: absolute;
   top: 50%;
   right: 35px;
+
+  @include mq(tablet, max) {
+    display: none;
+  }
 }
 .slider-pagination-item {
   margin-left: auto;
@@ -28,6 +32,10 @@
   display: flex;
   align-items: center;
   gap: 24px;
+
+  @include mq(tablet, max) {
+    display: none;
+  }
 }
 
 .slider-btn {

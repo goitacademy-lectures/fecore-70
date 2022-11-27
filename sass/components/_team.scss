@@ -1,17 +1,15 @@
 .team {
-  @include section;
+  @extend %section;
 
   background-color: #f7f7f7;
 }
 
 .team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+  @include card-set;
 
-.team-item {
-  flex-basis: calc((100% - 30px * 2) / 3);
+  @include mq(desktop) {
+    @include card-set(3);
+  }
 }
 
 .team-thumb {
@@ -34,10 +32,10 @@
   backdrop-filter: blur(2px);
 
   transition: transform var(--trns-fast);
-}
 
-.team-item:hover .overlay {
-  transform: translateY(0);
+  .team-item:hover & {
+    transform: translateY(0);
+  }
 }
 
 .overlay-text {
